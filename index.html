@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dokumentasi CuffnCode Web</title>
+  <link rel="stylesheet" href="docs.css" />
+</head>
+<body>
+  <header>
+    <a href="../index.html">← Kembali ke Web App</a>
+    <h1>Dokumentasi Project CuffnCode Web</h1>
+    <p>Simulasi Web Monitoring Tekanan Darah Digital Berbasis Logic Code</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>1. Deskripsi Project</h2>
+      <p>
+        CuffnCode Web adalah mini project berbasis web yang mensimulasikan sistem pengukuran
+        tekanan darah digital. Project ini tidak menggunakan hardware asli secara langsung,
+        tetapi memvisualisasikan alur kerja sensor tekanan, penguatan sinyal, pembacaan ADC,
+        dan pengolahan data melalui logic code JavaScript.
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Tujuan Project</h2>
+      <ul>
+        <li>Memahami konsep sistem monitoring tekanan darah digital.</li>
+        <li>Membuat implementasi logic code berbasis web.</li>
+        <li>Menampilkan data tekanan darah secara realtime melalui dashboard.</li>
+        <li>Mendokumentasikan project melalui GitHub Pages.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Komponen Referensi</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Komponen</th>
+            <th>Fungsi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>MPS20N0040D</td>
+            <td>Sensor tekanan untuk membaca tekanan udara dari manset.</td>
+          </tr>
+          <tr>
+            <td>AD620</td>
+            <td>Instrumentation amplifier untuk memperkuat sinyal kecil dari sensor.</td>
+          </tr>
+          <tr>
+            <td>TLC2272</td>
+            <td>Op-amp untuk membantu pengondisian sinyal dan offset.</td>
+          </tr>
+          <tr>
+            <td>ADC / Mikrokontroler</td>
+            <td>Mengubah sinyal analog menjadi data digital.</td>
+          </tr>
+          <tr>
+            <td>Web Logic Code</td>
+            <td>Menghitung tekanan darah, MAP, BPM, dan klasifikasi status.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>4. Alur Sistem</h2>
+      <ol>
+        <li>Sensor membaca tekanan dari manset.</li>
+        <li>Sinyal sensor diperkuat oleh AD620.</li>
+        <li>Sinyal dikondisikan menggunakan TLC2272.</li>
+        <li>Nilai analog dikonversi menjadi nilai ADC.</li>
+        <li>Program web memproses data ADC menjadi tekanan dalam mmHg.</li>
+        <li>Dashboard menampilkan sistolik, diastolik, MAP, BPM, status, dan grafik sinyal.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>5. Logic Code Utama</h2>
+      <p>
+        Program menggunakan beberapa fungsi utama:
+      </p>
+      <ul>
+        <li><code>convertAdcToVoltage()</code>: mengubah nilai ADC menjadi tegangan.</li>
+        <li><code>convertVoltageToPressure()</code>: mengubah tegangan menjadi estimasi tekanan.</li>
+        <li><code>calculateMAP()</code>: menghitung Mean Arterial Pressure.</li>
+        <li><code>classifyPressure()</code>: menentukan status tekanan darah.</li>
+        <li><code>simulateSensorSignal()</code>: membuat simulasi sinyal tekanan realtime.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. Output Web</h2>
+      <p>
+        Output yang ditampilkan berupa dashboard realtime yang menampilkan nilai sistolik,
+        diastolik, MAP, BPM, nilai ADC, tekanan sensor, grafik sinyal, dan log pengukuran.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Cara Menjalankan</h2>
+      <ol>
+        <li>Ekstrak folder project.</li>
+        <li>Buka file <code>index.html</code> di browser.</li>
+        <li>Klik tombol <b>Mulai</b> untuk menjalankan simulasi.</li>
+        <li>Gunakan menu mode pasien untuk mengubah skenario pengukuran.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>8. Script Video Demo 20–30 Detik</h2>
+      <blockquote>
+        Halo, kami dari kelompok ... Pada mini project ini kami membuat CuffnCode Web,
+        yaitu simulasi monitoring tekanan darah digital berbasis web. Sistem ini menampilkan
+        logic pembacaan sensor, konversi ADC, perhitungan sistolik, diastolik, MAP, BPM,
+        serta klasifikasi tekanan darah secara realtime. Berikut tampilan dashboard dan hasil
+        simulasi pengukurannya.
+      </blockquote>
+    </section>
+  </main>
+
+  <footer>
+    <p>CuffnCode Web Documentation</p>
+  </footer>
+</body>
+</html>
